@@ -64,14 +64,14 @@ where
             Some(d) if d.is_digit(10) => {
                 // Eat the digit
                 acc.extend(std::iter::once(d));
-            }
+            },
             Some(c) if *c == marker => {
                 break;
-            }
+            },
             // Either it wasn't a digit, or we reached the end.
             Some(_) | None => {
                 return None;
-            }
+            },
         }
         char_iter.next();
     }
@@ -105,14 +105,14 @@ where
                         Some(n) => n,
                         None => {
                             continue;
-                        }
+                        },
                     };
 
                     let right = match read_digit_until(&mut self.inner_iter, ')') {
                         Some(n) => n,
                         None => {
                             continue;
-                        }
+                        },
                     };
 
                     // Skip while not included.
@@ -151,14 +151,14 @@ where
                             continue;
                         },
                     }
-                }
+                },
                 // We're just looking for 'm' to start a mul
                 Some(_) => {
                     continue;
-                }
+                },
                 None => {
                     return None;
-                }
+                },
             }
         }
     }
@@ -185,7 +185,10 @@ impl CondBehavior {
     }
 }
 
-fn read_muls(chars: impl Iterator<Item = char>, cond_behavior: CondBehavior) -> impl Iterator<Item = Mul> {
+fn read_muls(
+    chars: impl Iterator<Item = char>,
+    cond_behavior: CondBehavior,
+) -> impl Iterator<Item = Mul> {
     MulSearcher::new(chars, cond_behavior)
 }
 

@@ -39,14 +39,14 @@ impl Direction {
                 } else {
                     return false;
                 }
-            }
+            },
             Direction::Desc => {
                 if n1 > n2 {
                     n1 - n2
                 } else {
                     return false;
                 }
-            }
+            },
         };
 
         return diff <= 3.into();
@@ -272,12 +272,12 @@ mod test_p2 {
 
     #[test]
     fn is_safe_with_first_removed() {
-        assert!(Report(vec![432,45,44,43,42]).is_safe_with_dampener())
+        assert!(Report(vec![432, 45, 44, 43, 42]).is_safe_with_dampener())
     }
 
     #[test]
     fn is_safe_with_second_removed() {
-        assert!(Report(vec![45,432,46,47,48]).is_safe_with_dampener())
+        assert!(Report(vec![45, 432, 46, 47, 48]).is_safe_with_dampener())
     }
 
     #[test]
@@ -287,12 +287,11 @@ mod test_p2 {
 
     #[test]
     fn sample_examples() {
-        assert!(Report(vec![7,6,4,2,1]).is_safe_with_dampener());
-        assert!(!Report(vec![1,2,7,8,9]).is_safe_with_dampener());
-        assert!(!Report(vec![9,7,6,2,1]).is_safe_with_dampener());
-        assert!(Report(vec![1,3,2,4,5]).is_safe_with_dampener());
-        assert!(Report(vec![8,6,4,4,1]).is_safe_with_dampener());
-        assert!(Report(vec![1,3,6,7,9]).is_safe_with_dampener());
+        assert!(Report(vec![7, 6, 4, 2, 1]).is_safe_with_dampener());
+        assert!(!Report(vec![1, 2, 7, 8, 9]).is_safe_with_dampener());
+        assert!(!Report(vec![9, 7, 6, 2, 1]).is_safe_with_dampener());
+        assert!(Report(vec![1, 3, 2, 4, 5]).is_safe_with_dampener());
+        assert!(Report(vec![8, 6, 4, 4, 1]).is_safe_with_dampener());
+        assert!(Report(vec![1, 3, 6, 7, 9]).is_safe_with_dampener());
     }
-
 }

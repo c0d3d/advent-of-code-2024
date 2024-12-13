@@ -1,0 +1,6 @@
+imports_granularity = "One"
+newline_style = "Unix"
+reorder_impl_items = true
+reorder_imports = true
+group_imports = "StdExternalCrate"
+match_block_trailing_comma = true

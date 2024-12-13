@@ -84,10 +84,10 @@ impl Grid {
             match self.at(&nxt_point) {
                 Some(actual_char) if actual_char == *nxt_char => {
                     nxt_point = nxt_point.add(dir);
-                }
+                },
                 _ => {
                     return false;
-                }
+                },
             }
         }
 
