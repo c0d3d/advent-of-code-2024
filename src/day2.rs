@@ -1,4 +1,6 @@
-use std::{fmt::Display, ops::Sub, str::FromStr};
+use std::fmt::Display;
+use std::ops::Sub;
+use std::str::FromStr;
 
 const INPUT_1: &'static str = include_str!("day2-1.txt");
 

@@ -1,4 +1,6 @@
-use std::collections::{HashMap, HashSet};
+use std::collections::HashMap;
+use std::collections::HashSet;
+use std::str::FromStr;
 
 const INPUT_1: &'static str = include_str!("day5-1.txt");
 
