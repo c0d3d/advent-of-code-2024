@@ -1,3 +1,7 @@
+
+// Used this in a few different solutions.
+mod grid;
+
 mod day1;
 mod day2;
 mod day3;
